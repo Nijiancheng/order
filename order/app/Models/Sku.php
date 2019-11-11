@@ -13,7 +13,7 @@ class Sku extends Model
      *
      * @var string
      */
-    protected $table = 'pre_product';
+    protected $table = 'pre_sku';
 
     /**
      * 可以被批量赋值的属性。
@@ -21,5 +21,11 @@ class Sku extends Model
      * @var array
      */
     protected $fillable = ['product_id', 'version', 'quantity', 'price', 'weight','sale_num','status'];
-
+    /**
+     * 获得此评论所属的文章。
+     */
+    public function product()
+    {
+        return $this->belongsTo('App\Models\product');
+    }
 }

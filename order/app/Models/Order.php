@@ -26,5 +26,5 @@ class Order extends Model
      *
      * @var array
      */
-    protected $fillable = ['number', 'user_id', 'product_fee', 'express_fee', 'total_fee','status','delivery_status','payment_status'];
+    protected $fillable = ['number', 'user_id', 'product_fee', 'express_fee', 'total_fee','status','delivery_status','payment_status','receiver_name','receiver_province','receiver_city','receiver_district','receiver_detail','receiver_mobile'];
 }
